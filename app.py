@@ -2,16 +2,11 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from starlette import status
-from fastapi.exception_handlers import (
-    http_exception_handler,
-    request_validation_exception_handler,
-)
 from fastapi.exceptions import RequestValidationError
-
-from api import router
+from api import router as calc_router
 
 app = FastAPI()
-app.include_router(router)
+app.include_router(calc_router)
 
 
 @app.exception_handler(Exception)

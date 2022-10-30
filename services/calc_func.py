@@ -1,11 +1,6 @@
 from models import CalculationBody
 from datetime import datetime, date
-import logging
 from dateutil.relativedelta import relativedelta
-
-
-logger = logging.getLogger("log")
-logger.setLevel("INFO")
 
 
 def calculate_amount(amount: float, rate: float) -> float:
