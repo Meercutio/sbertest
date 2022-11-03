@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from starlette import status
 from fastapi.exceptions import RequestValidationError
-from api import router as calc_router
+from api.calculation import router as calc_router
 
 app = FastAPI()
 app.include_router(calc_router)
