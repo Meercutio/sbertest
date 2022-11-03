@@ -8,8 +8,7 @@ PERCENTAGE = 100  # The same
 
 
 def calculate_amount(amount: float, rate: float) -> float:
-    payment: float = amount
-    return round(payment * (1 + rate/MONTH_OF_YEAR/PERCENTAGE), 2)
+    return round(amount * (1 + rate/MONTH_OF_YEAR/PERCENTAGE), 2)
 
 
 def main_calculation(body: CalculationBody) -> dict:
